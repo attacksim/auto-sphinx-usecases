@@ -1,0 +1,1 @@
+%WINDIR%\system32\rundll32.exe "%~dp0graphing.dll",dummy
