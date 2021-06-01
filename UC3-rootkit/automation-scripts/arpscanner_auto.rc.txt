@@ -1,0 +1,25 @@
+<ruby>
+
+ 
+#pid = client.sys.process.getpid
+#print_status("PID is #{pid}") 
+ 
+interfaces = client.net.config.interfaces
+
+ip_addr = "127.0.0.1" 	#check against loopback interface
+
+interfaces.each do |i|
+	if i.addrs[1].strip != "127.0.0.1"
+		ip_addr	= i.addrs[1].strip
+		print_status("passed for #{i.addrs[1]}")
+	end
+
+end
+
+print_status("#{ip_addr}")
+
+run_single("run arp_scanner -r #{ip_addr}/24")
+ 
+
+ 
+</ruby>
