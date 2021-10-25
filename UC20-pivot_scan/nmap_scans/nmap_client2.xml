@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Mon Oct 25 17:57:01 2021 as: nmap -A -T4 -F -oA nmap_client2 10.10.50.32 -->
+<nmaprun scanner="nmap" args="nmap -A -T4 -F -oA nmap_client2 10.10.50.32" start="1635199021" startstr="Mon Oct 25 17:57:01 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="100" services="7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.50.32" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1635199022" endtime="1635200567"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.10.50.32" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="97">
+<extrareasons reason="conn-refused" count="97"/>
+</extraports>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" product="Windows 7 Professional 7601 Service Pack 1 microsoft-ds" extrainfo="workgroup: SPHINX" hostname="CLIENT2" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="clock-skew" output="mean: -1h00m36s, deviation: 1h43m51s, median: -39s"><elem key="median">-39</elem>
+<elem key="stddev">6231</elem>
+<elem key="count">3</elem>
+<elem key="mean">-3636</elem>
+</script><script id="smb-os-discovery" output="&#xa;  OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)&#xa;  OS CPE: cpe:/o:microsoft:windows_7::sp1:professional&#xa;  Computer name: client2&#xa;  NetBIOS computer name: CLIENT2\x00&#xa;  Domain name: sphinx.ghv.gr&#xa;  Forest name: sphinx.ghv.gr&#xa;  FQDN: client2.sphinx.ghv.gr&#xa;  System time: 2021-10-26T01:21:56+03:00&#xa;"><elem key="os">Windows 7 Professional 7601 Service Pack 1</elem>
+<elem key="lanmanager">Windows 7 Professional 6.1</elem>
+<elem key="server">CLIENT2\x00</elem>
+<elem key="date">2021-10-26T01:21:56+03:00</elem>
+<elem key="fqdn">client2.sphinx.ghv.gr</elem>
+<elem key="domain_dns">sphinx.ghv.gr</elem>
+<elem key="forest_dns">sphinx.ghv.gr</elem>
+<elem key="workgroup">SPHINX\x00</elem>
+<elem key="cpe">cpe:/o:microsoft:windows_7::sp1:professional</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2021-10-25T22:21:52&#xa;  start_date: 2021-10-25T21:43:09"><elem key="date">2021-10-25T22:21:52</elem>
+<elem key="start_date">2021-10-25T21:43:09</elem>
+</script></hostscript><times srtt="10246247" rttvar="2000000" to="1250000"/>
+</host>
+<runstats><finished time="1635200567" timestr="Mon Oct 25 18:22:47 2021" summary="Nmap done at Mon Oct 25 18:22:47 2021; 1 IP address (1 host up) scanned in 1545.48 seconds" elapsed="1545.48" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

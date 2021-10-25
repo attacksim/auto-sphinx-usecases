@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Mon Oct 25 17:51:17 2021 as: nmap -A -T4 -F -oA nmap_docker_t 10.10.50.38 -->
+<nmaprun scanner="nmap" args="nmap -A -T4 -F -oA nmap_docker_t 10.10.50.38" start="1635198677" startstr="Mon Oct 25 17:51:17 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="100" services="7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.50.38" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskprogress task="Connect Scan" time="1635198780" percent="63.00" remaining="56" etc="1635198836"/>
+<taskprogress task="Connect Scan" time="1635198800" percent="76.00" remaining="37" etc="1635198836"/>
+<taskprogress task="Connect Scan" time="1635198824" percent="92.00" remaining="13" etc="1635198836"/>
+<taskprogress task="Service scan" time="1635198873" percent="50.00" remaining="38" etc="1635198910"/>
+<host starttime="1635198677" endtime="1635198974"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.10.50.38" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="98">
+<extrareasons reason="conn-refused" count="98"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" servicefp="SF-Port443-TCP:V=7.91%T=SSL%I=7%D=10/25%Time=61772785%P=x86_64-pc-linux-gnu%r(GetRequest,159,&quot;HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/app/login\?nextUrl=%2F\r\nkbn-name:\x20kibana\r\nx-frame-options:\x20sameorigin\r\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate\r\nset-cookie:\x20security_authentication=;\x20Max-Age=0;\x20Expires=Thu,\x2001\x20Jan\x201970\x2000:00:00\x20GMT;\x20HttpOnly;\x20Path=/\r\ncontent-length:\x200\r\nDate:\x20Mon,\x2025\x20Oct\x202021\x2021:54:12\x20GMT\r\nConnection:\x20close\r\n\r\n&quot;)%r(HTTPOptions,13D,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nkbn-name:\x20kibana\r\nx-frame-options:\x20sameorigin\r\ncontent-type:\x20application/json;\x20charset=utf-8\r\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate\r\ncontent-length:\x2060\r\nDate:\x20Mon,\x2025\x20Oct\x202021\x2021:54:14\x20GMT\r\nConnection:\x20close\r\n\r\n{\&quot;statusCode\&quot;:404,\&quot;error\&quot;:\&quot;Not\x20Found\&quot;,\&quot;message\&quot;:\&quot;Not\x20Found\&quot;}&quot;)%r(FourOhFourRequest,1BB,&quot;HTTP/1\.1\x20401\x20Unauthorized\r\nkbn-name:\x20kibana\r\nx-frame-options:\x20sameorigin\r\ncontent-type:\x20application/json;\x20charset=utf-8\r\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate\r\nset-cookie:\x20security_authentication=;\x20Max-Age=0;\x20Expires=Thu,\x2001\x20Jan\x201970\x2000:00:00\x20GMT;\x20HttpOnly;\x20Path=/\r\ncontent-length:\x2077\r\nDate:\x20Mon,\x2025\x20Oct\x202021\x2021:54:17\x20GMT\r\nConnection:\x20close\r\n\r\n{\&quot;statusCode\&quot;:401,\&quot;error\&quot;:\&quot;Unauthorized\&quot;,\&quot;message\&quot;:\&quot;Authentication\x20required\&quot;}&quot;)%r(tor-versions,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(RTSPRequest,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(RPCCheck,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(DNSVersionBindReqTCP,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(DNSStatusRequestTCP,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(Help,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(SSLSessionReq,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(TerminalServerCookie,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;);" tunnel="ssl" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie, tor-versions: &#xa;    HTTP/1.1 400 Bad Request&#xa;  FourOhFourRequest: &#xa;    HTTP/1.1 401 Unauthorized&#xa;    kbn-name: kibana&#xa;    x-frame-options: sameorigin&#xa;    content-type: application/json; charset=utf-8&#xa;    cache-control: private, no-cache, no-store, must-revalidate&#xa;    set-cookie: security_authentication=; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly; Path=/&#xa;    content-length: 77&#xa;    Date: Mon, 25 Oct 2021 21:54:17 GMT&#xa;    Connection: close&#xa;    {&quot;statusCode&quot;:401,&quot;error&quot;:&quot;Unauthorized&quot;,&quot;message&quot;:&quot;Authentication required&quot;}&#xa;  GetRequest: &#xa;    HTTP/1.1 302 Found&#xa;    location: /app/login?nextUrl=%2F&#xa;    kbn-name: kibana&#xa;    x-frame-options: sameorigin&#xa;    cache-control: private, no-cache, no-store, must-revalidate&#xa;    set-cookie: security_authentication=; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly; Path=/&#xa;    content-length: 0&#xa;    Date: Mon, 25 Oct 2021 21:54:12 GMT&#xa;    Connection: close&#xa;  HTTPOptions: &#xa;    HTTP/1.1 404 Not Found&#xa;    kbn-name: kibana&#xa;    x-frame-options: sameorigin&#xa;    content-type: application/json; charset=utf-8&#xa;    cache-control: private, no-cache, no-store, must-revalidate&#xa;    content-length: 60&#xa;    Date: Mon, 25 Oct 2021 21:54:14 GMT&#xa;    Connection: close&#xa;    {&quot;statusCode&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:&quot;Not Found&quot;}"><elem key="DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie, tor-versions">&#xa;    HTTP/1.1 400 Bad Request</elem>
+<elem key="FourOhFourRequest">&#xa;    HTTP/1.1 401 Unauthorized&#xa;    kbn-name: kibana&#xa;    x-frame-options: sameorigin&#xa;    content-type: application/json; charset=utf-8&#xa;    cache-control: private, no-cache, no-store, must-revalidate&#xa;    set-cookie: security_authentication=; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly; Path=/&#xa;    content-length: 77&#xa;    Date: Mon, 25 Oct 2021 21:54:17 GMT&#xa;    Connection: close&#xa;    {&quot;statusCode&quot;:401,&quot;error&quot;:&quot;Unauthorized&quot;,&quot;message&quot;:&quot;Authentication required&quot;}</elem>
+<elem key="GetRequest">&#xa;    HTTP/1.1 302 Found&#xa;    location: /app/login?nextUrl=%2F&#xa;    kbn-name: kibana&#xa;    x-frame-options: sameorigin&#xa;    cache-control: private, no-cache, no-store, must-revalidate&#xa;    set-cookie: security_authentication=; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly; Path=/&#xa;    content-length: 0&#xa;    Date: Mon, 25 Oct 2021 21:54:12 GMT&#xa;    Connection: close</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.1 404 Not Found&#xa;    kbn-name: kibana&#xa;    x-frame-options: sameorigin&#xa;    content-type: application/json; charset=utf-8&#xa;    cache-control: private, no-cache, no-store, must-revalidate&#xa;    content-length: 60&#xa;    Date: Mon, 25 Oct 2021 21:54:14 GMT&#xa;    Connection: close&#xa;    {&quot;statusCode&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:&quot;Not Found&quot;}</elem>
+</script><script id="http-title" output="Elastic&#xa;Requested resource was /app/login?nextUrl=%2F"><elem key="title">Elastic</elem>
+<elem key="redirect_url">/app/login?nextUrl=%2F</elem>
+</script><script id="ssl-cert" output="Subject: commonName=opendistroforelasticsearch.org&#xa;Not valid before: 2019-02-15T07:29:23&#xa;Not valid after:  2029-02-12T07:29:23"><table key="subject">
+<elem key="commonName">opendistroforelasticsearch.org</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">opendistroforelasticsearch.org</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">B3CEC3888C3168FBC0E0CD78047EB7D7C5A059215A6A3B36257DAAD794B4E4E738B0451BA556561DA441EBF53E1D9D174BB00E0EB7D8F9374E5D5EAFE78A0A81BE633C2426A559D02265C597693798C2A6588263121A1941CED08F8A761CE0D48524D50DBEF1A79537B75D898642D774FF6F92AEB7C96BD773BC393A9E057DB3471BB35FE8D434066302C08076CBF68D1ACEF78F3CDCEC83CC5E945EF11325C5B9B85E23ECD2BD3769DF02994CCBA67BBFFD2403CF7F79CB806FCC267FB30EBA5D61B07C8D778689C081A1296FEA04B246F861C1E4188EE8E68C24CCEBE64CD257DC1EE6BFE995AB39BE2025FE35AC604092AEF1A352A04438A385CBA452D991</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">8D:39:04:E1:84:1E:D5:21:AD:99:A4:20:BD:D6:E8:AA:49:2C:4E:F5</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:8D:39:04:E1:84:1E:D5:21:AD:99:A4:20:BD:D6:E8:AA:49:2C:4E:F5&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+</table>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2019-02-15T07:29:23</elem>
+<elem key="notAfter">2029-02-12T07:29:23</elem>
+</table>
+<elem key="md5">e91e1c1a1c62c5027da8699c2b17e0f2</elem>
+<elem key="sha1">e0bac017b9cb1d79b9ad434e4199483b74823cb7</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDJTCCAg2gAwIBAgIJAKO3AgiyHbReMA0GCSqGSIb3DQEBBQUAMCkxJzAlBgNV&#xa;BAMMHm9wZW5kaXN0cm9mb3JlbGFzdGljc2VhcmNoLm9yZzAeFw0xOTAyMTUwNzI5&#xa;MjNaFw0yOTAyMTIwNzI5MjNaMCkxJzAlBgNVBAMMHm9wZW5kaXN0cm9mb3JlbGFz&#xa;dGljc2VhcmNoLm9yZzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALPO&#xa;w4iMMWj7wODNeAR+t9fFoFkhWmo7NiV9qteUtOTnOLBFG6VWVh2kQev1Ph2dF0uw&#xa;Dg632Pk3Tl1er+eKCoG+YzwkJqVZ0CJlxZdpN5jCpliCYxIaGUHO0I+Kdhzg1IUk&#xa;1Q2+8aeVN7ddiYZC13T/b5Kut8lr13O8OTqeBX2zRxuzX+jUNAZjAsCAdsv2jRrO&#xa;94883OyDzF6UXvETJcW5uF4j7NK9N2nfAplMy6Z7v/0kA89/ecuAb8wmf7MOul1h&#xa;sHyNd4aJwIGhKW/qBLJG+GHB5BiO6OaMJMzr5kzSV9we5r/plas5viAl/jWsYECS&#xa;rvGjUqBEOKOFy6RS2ZECAwEAAaNQME4wHQYDVR0OBBYEFI05BOGEHtUhrZmkIL3W&#xa;6KpJLE71MB8GA1UdIwQYMBaAFI05BOGEHtUhrZmkIL3W6KpJLE71MAwGA1UdEwQF&#xa;MAMBAf8wDQYJKoZIhvcNAQEFBQADggEBACvAn1fRvkJamVKdmsou+YTmxu5YhDva&#xa;MepBVT6yeqctcgQgUfaneuBrl/+9zmxkjykZ1uimSS2IM1FxIXuB8rX+iAcgFyIs&#xa;XXquOhJlaXs/kN0KBGUSRkTMQSGIaTh26U7GnCQrdaIZDtKp7CRWjNebeDucNOc+&#xa;aXOqiNFbVePNe8+EZIDb0FmV4IiHuLcqCwzZvgesl3EUPuMsnrxeNKIw83ecpjqK&#xa;YRwWWhvY57asVbOZjn+M57bJSpzO9bO70uib0ItWs19aWqYP1vEOuNHEDbr2EVel&#xa;dejL2fYF06uiw179PSYnvDQohWdiqm8dM0Nx+QtJcbOR6BiBh8aQTjw=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script></port>
+</ports>
+<times srtt="1530515" rttvar="55384" to="1250000"/>
+</host>
+<runstats><finished time="1635198974" timestr="Mon Oct 25 17:56:14 2021" summary="Nmap done at Mon Oct 25 17:56:14 2021; 1 IP address (1 host up) scanned in 297.04 seconds" elapsed="297.04" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
