@@ -1,0 +1,79 @@
+{
+	"name": "UC05",
+	"versions": {
+		"attack": "10",
+		"navigator": "4.5.1",
+		"layer": "4.2"
+	},
+	"domain": "enterprise-attack",
+	"description": "Ransomware Infection via USB Flash Drive",
+	"filters": {
+		"platforms": [
+			"Linux",
+			"macOS",
+			"Windows",
+			"Azure AD",
+			"Office 365",
+			"SaaS",
+			"IaaS",
+			"Google Workspace",
+			"PRE",
+			"Network",
+			"Containers"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"aggregateFunction": "average",
+		"showID": false,
+		"showName": true,
+		"showAggregateScores": false,
+		"countUnscored": false
+	},
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1091",
+			"tactic": "lateral-movement",
+			"color": "#6baed6",
+			"comment": "UC05",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1091",
+			"tactic": "initial-access",
+			"color": "#6baed6",
+			"comment": "UC05",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"color": "#6baed6",
+			"comment": "UC05",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ff6666",
+			"#ffe766",
+			"#8ec843"
+		],
+		"minValue": 0,
+		"maxValue": 100
+	},
+	"legendItems": [],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": false
+}

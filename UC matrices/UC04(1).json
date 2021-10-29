@@ -1,0 +1,133 @@
+{
+	"name": "UC04",
+	"versions": {
+		"attack": "10",
+		"navigator": "4.5.1",
+		"layer": "4.2"
+	},
+	"domain": "enterprise-attack",
+	"description": "Remote Access Trojan Attached to PDF File",
+	"filters": {
+		"platforms": [
+			"Linux",
+			"macOS",
+			"Windows",
+			"Azure AD",
+			"Office 365",
+			"SaaS",
+			"IaaS",
+			"Google Workspace",
+			"PRE",
+			"Network",
+			"Containers"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"aggregateFunction": "average",
+		"showID": false,
+		"showName": true,
+		"showAggregateScores": false,
+		"countUnscored": false
+	},
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1547",
+			"tactic": "persistence",
+			"color": "#6baed6",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1547",
+			"tactic": "privilege-escalation",
+			"color": "#6baed6",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "collection",
+			"color": "#6baed6",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "credential-access",
+			"color": "#6baed6",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1056.001",
+			"tactic": "collection",
+			"color": "#6baed6",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1056.001",
+			"tactic": "credential-access",
+			"color": "#6baed6",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1566",
+			"tactic": "initial-access",
+			"color": "#6baed6",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1566.001",
+			"tactic": "initial-access",
+			"color": "#6baed6",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"color": "#6baed6",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ff6666",
+			"#ffe766",
+			"#8ec843"
+		],
+		"minValue": 0,
+		"maxValue": 100
+	},
+	"legendItems": [],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": false
+}
